@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Camera } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const StudentRegistrationForm = () => {
     const [studentData, setStudentData] = useState({
@@ -79,6 +80,9 @@ const StudentRegistrationForm = () => {
                     <div className="card shadow">
                         <div className="card-header bg-warning text-white">
                             <h2 className="mb-0 text-center">Student Registration</h2>
+                            <Link to="/studenttable" className="btn btn-light">
+                Go To Table Page
+            </Link>
                         </div>
                         <div className="card-body">
                             <form onSubmit={handleSubmit}>
