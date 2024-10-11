@@ -75,9 +75,9 @@ const StudentRegistrationForm = () => {
     return (
         <div className="container py-5">
             <div className="row justify-content-center">
-                <div className="col-md-8">
+                <div className="col-md-10">
                     <div className="card shadow">
-                        <div className="card-header bg-primary text-white">
+                        <div className="card-header bg-warning text-white">
                             <h2 className="mb-0 text-center">Student Registration</h2>
                         </div>
                         <div className="card-body">
@@ -152,7 +152,7 @@ const StudentRegistrationForm = () => {
                                         </div>
 
                                         <div className="card-header text-black">
-                            <h2 className="mb-0 text-center">Guardian Information</h2>
+                            <p className="mb-0 text-center">Guardian Information</p>
                         </div>
 
                                         <div className="mb-3">
@@ -195,8 +195,8 @@ const StudentRegistrationForm = () => {
                                         </div>
 
                                         <div className="d-flex justify-content-between mt-4">
-                                            <button type="button" onClick={clearForm} className="btn btn-secondary btn-lg w-45">Clear</button>
-                                            <button type="submit" className="btn btn-primary btn-lg w-45">Register Student</button>
+                                            <button type="button" onClick={clearForm} className="btn btn-danger btn-lg w-45">Clear</button>
+                                            <button type="submit" className="btn btn-success btn-lg w-45">Register Student</button>
                                         </div>
                                     </div>
                                 </div>
