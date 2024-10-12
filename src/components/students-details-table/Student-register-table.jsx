@@ -43,6 +43,10 @@ const StudentRegisterTable = () => {
         navigate(`/update/${student.id}`, { state: student });
     };
 
+    const showprofile = (student) => {
+     navigate(`/profile/${student.id}` , {state: student});
+    };
+
     useEffect(() => {
         fetchStudents();
     }, []);
@@ -62,6 +66,7 @@ const StudentRegisterTable = () => {
                                 <th>Name</th>
                                 <th>Age</th>
                                 <th>Contact</th>
+                                <th></th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -84,6 +89,9 @@ const StudentRegisterTable = () => {
                                         >
                                             Delete
                                         </button>
+                                    </td>
+                                    <td>
+                                        <button type='button' onClick={() => showprofile(student)} className="btn btn-success w-15">Show Profile</button>
                                     </td>
                                 </tr>
                             ))}
