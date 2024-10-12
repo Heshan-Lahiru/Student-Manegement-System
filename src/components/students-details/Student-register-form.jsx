@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Camera } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate } from 'react-router-dom';
 
 const StudentRegistrationForm = () => {
+const navigate = useNavigate();
+
     const [studentData, setStudentData] = useState({
         name: '',
         age: '',
@@ -50,8 +52,9 @@ const StudentRegistrationForm = () => {
             console.log(result);
             console.log(studentData);
 
-
+          navigate(`/studenttable`);
             alert('Student registered successfully!');
+
             clearForm();
          }
         } catch (error) {

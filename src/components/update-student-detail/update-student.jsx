@@ -34,49 +34,65 @@ const Updatestudent = () => {
             }
 
             console.log('Student updated successfully');
-            navigate('/');
+            navigate('/studenttable');
         } catch (error) {
             console.error('Error updating student:', error);
         }
     };
 
-
     return (
-        <div className="container mt-5">
-            <h2 className="text-center mb-4">Update Student Information</h2>
-            <div className="form-group">
-                <label>Name</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    name="name"
-                    value={student.name}
-                    onChange={handleChange}
-                />
+        <div className="container py-5">
+            <div className="row justify-content-center">
+                <div className="col-md-6">
+                    <div className="card shadow">
+                        <div className="card-body">
+                        <div className="card-header bg-warning text-white">
+                            <h2 className="card-title text-center mb-4">Update Student Information</h2>
+                            </div>
+                            <form>
+                                <div className="mb-3 py-3">
+                                    <label htmlFor="name" className="form-label">Name</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="name"
+                                        name="name"
+                                        value={student.name}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="mb-3 py-3">
+                                    <label htmlFor="age" className="form-label">Age</label>
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        id="age"
+                                        name="age"
+                                        value={student.age}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="mb-3 py-3">
+                                    <label htmlFor="contact" className="form-label">Contact</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="contact"
+                                        name="contact"
+                                        value={student.contact}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="d-grid">
+                                    <button type="button" className="btn btn-success btn-lg" onClick={handleUpdate}>
+                                        Update
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="form-group">
-                <label>Age</label>
-                <input
-                    type="number"
-                    className="form-control"
-                    name="age"
-                    value={student.age}
-                    onChange={handleChange}
-                />
-            </div>
-            <div className="form-group">
-                <label>Contact</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    name="contact"
-                    value={student.contact}
-                    onChange={handleChange}
-                />
-            </div>
-            <button className="btn btn-primary mt-3" onClick={handleUpdate}>
-                Update
-            </button>
         </div>
     );
 };

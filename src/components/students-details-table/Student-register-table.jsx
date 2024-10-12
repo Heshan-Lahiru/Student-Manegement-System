@@ -48,7 +48,9 @@ const StudentRegisterTable = () => {
 
     return (
         <div className="container mt-5">
+        <div className="card-header bg-warning text-white">
             <h2 className="text-center mb-4">Registered Students</h2>
+            </div>
             <div className="table-responsive">
                 <table className="table table-dark table-striped">
                     <thead className="thead-dark">
