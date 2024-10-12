@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import Nav from '../nav/nav';
 
 const Updatestudent = () => {
     const { id } = useParams();
@@ -41,6 +42,8 @@ const Updatestudent = () => {
     };
 
     return (
+        <div>
+        <Nav />
         <div className="container py-5">
             <div className="row justify-content-center">
                 <div className="col-md-6">
@@ -93,6 +96,7 @@ const Updatestudent = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

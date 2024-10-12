@@ -15,6 +15,7 @@ function App() {
   return (
     <Router>
     <Routes>
+   
       <Route path="/" element={<Studentform />} />
       <Route path="/studenttable" element={<Studenttable />} />
       <Route path="/update/:id" element={<Updatestudent />} />

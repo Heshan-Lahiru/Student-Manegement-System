@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
+import Nav from '../nav/nav';
 
 const StudentRegisterTable = () => {
     const [students, setStudents] = useState([]);
@@ -47,6 +48,8 @@ const StudentRegisterTable = () => {
     }, []);
 
     return (
+        <div>
+        <Nav />
         <div className="container mt-5">
         <div className="card-header bg-warning text-white">
             <h2 className="text-center mb-4">Registered Students</h2>
@@ -88,6 +91,7 @@ const StudentRegisterTable = () => {
 
                 </table>
             </div>
+        </div>
         </div>
     );
 };
