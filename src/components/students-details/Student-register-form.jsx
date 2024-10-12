@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Camera } from 'lucide-react';
-import { Link ,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Nav from '../nav/nav';
 
 const StudentRegistrationForm = () => {
 const navigate = useNavigate();
@@ -77,15 +78,15 @@ const navigate = useNavigate();
     };
 
     return (
+        <div>
+        <Nav />
         <div className="container py-5">
             <div className="row justify-content-center">
                 <div className="col-md-10">
                     <div className="card shadow">
                         <div className="card-header bg-warning text-white">
                             <h2 className="mb-0 text-center">Student Registration</h2>
-                            <Link to="/studenttable" className="btn btn-light">
-                Go To Table Page
-            </Link>
+                            
                         </div>
                         <div className="card-body">
                             <form onSubmit={handleSubmit}>
@@ -212,6 +213,7 @@ const navigate = useNavigate();
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

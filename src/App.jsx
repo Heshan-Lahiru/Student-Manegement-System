@@ -7,6 +7,8 @@ import Studenttable from './components/students-details-table/Student-register-t
 
 import Updatestudent from './components/update-student-detail/update-student'
 
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,6 +18,7 @@ function App() {
       <Route path="/" element={<Studentform />} />
       <Route path="/studenttable" element={<Studenttable />} />
       <Route path="/update/:id" element={<Updatestudent />} />
+    
       </Routes>
     </Router>
     
