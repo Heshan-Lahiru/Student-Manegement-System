@@ -7,6 +7,8 @@ import Studenttable from './components/students-details-table/Student-register-t
 
 import Updatestudent from './components/update-student-detail/update-student'
 
+import '@fontsource/roboto/700.css';
+
 
 
 function App() {
@@ -14,15 +16,15 @@ function App() {
 
   return (
     <Router>
-    <Routes>
-   
-      <Route path="/" element={<Studentform />} />
-      <Route path="/studenttable" element={<Studenttable />} />
-      <Route path="/update/:id" element={<Updatestudent />} />
-    
+      <Routes>
+
+        <Route path="/" element={<Studentform />} />
+        <Route path="/studenttable" element={<Studenttable />} />
+        <Route path="/update/:id" element={<Updatestudent />} />
+
       </Routes>
     </Router>
-    
+
   )
 }
 

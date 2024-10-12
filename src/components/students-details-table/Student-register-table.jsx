@@ -49,49 +49,49 @@ const StudentRegisterTable = () => {
 
     return (
         <div>
-        <Nav />
-        <div className="container mt-5">
-        <div className="card-header bg-warning text-white">
-            <h2 className="text-center mb-4">Registered Students</h2>
-            </div>
-            <div className="table-responsive">
-                <table className="table table-dark table-striped">
-                    <thead className="thead-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Contact</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {students.map((student) => (
-                            <tr key={student.id}>
-                                <td>{student.id}</td>
-                                <td>{student.name}</td>
-                                <td>{student.age}</td>
-                                <td>{student.contact}</td>
-                                <td>
-                                    <button type="button" onClick={() => handleUpdate(student)} className="btn btn-success w-15">Update</button>
-                                </td>
-                                <td>
-                                    <button
-                                        type="button"
-                                        onClick={() => deleteStudent(student.id)}
-                                        className="btn btn-danger w-15"
-                                    >
-                                        Delete
-                                    </button>
-                                </td>
+            <Nav />
+            <div className="container mt-5">
+                <div className="card-header bg-warning text-white">
+                    <h2 className="text-center mb-4">Registered Students</h2>
+                </div>
+                <div className="table-responsive">
+                    <table className="table table-dark table-striped">
+                        <thead className="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Contact</th>
+                                <th></th>
+                                <th></th>
                             </tr>
-                        ))}
-                    </tbody>
+                        </thead>
+                        <tbody>
+                            {students.map((student) => (
+                                <tr key={student.id}>
+                                    <td>{student.id}</td>
+                                    <td>{student.name}</td>
+                                    <td>{student.age}</td>
+                                    <td>{student.contact}</td>
+                                    <td>
+                                        <button type="button" onClick={() => handleUpdate(student)} className="btn btn-success w-15">Update</button>
+                                    </td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            onClick={() => deleteStudent(student.id)}
+                                            className="btn btn-danger w-15"
+                                        >
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
 
-                </table>
+                    </table>
+                </div>
             </div>
-        </div>
         </div>
     );
 };
